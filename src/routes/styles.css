@@ -1,15 +1,8 @@
-
-:root {
-	
-}
-
 body {
 	min-height: 100vh;
 	margin: 0;
 	background-color: #c9130b;
 	color: #fefefe;
-	
-
 }
 
 body, input, a {

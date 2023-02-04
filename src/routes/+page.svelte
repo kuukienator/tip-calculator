@@ -31,8 +31,6 @@
 			? customPercentage / 100
 			: percentageOptions.find((e) => e.id === percentageOption)?.value || 0.1;
 	$: withTip = calculateWithTip(amountPaid, tipPercentage);
-	$: console.log('amountPaid', amountPaid, withTip);
-	$: console.log('tipPercentage', tipPercentage);
 </script>
 
 <svelte:head>

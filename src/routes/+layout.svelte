@@ -8,7 +8,8 @@
 		<slot />
 	</main>
 	<footer>
-		<a href="https://twitter.com/kuukienator" target="_blank">@kuukienator</a> <span>2023</span>
+		<a href="https://twitter.com/kuukienator" target="_blank" rel="noreferrer">@kuukienator</a>
+		<span>2023</span>
 	</footer>
 </div>
 
