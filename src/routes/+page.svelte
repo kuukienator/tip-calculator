@@ -1,7 +1,8 @@
 <script lang="ts">
-	let amountPaid: number;
+	let amountPaid: number | null;
 	let percentageOption = 1;
 	let customPercentage = 15;
+	let amountInput!: HTMLInputElement;
 
 	const percentageOptions = [
 		{
@@ -23,14 +24,15 @@
 	};
 
 	const onClearClick = () => {
-		amountPaid = 0;
+		amountPaid = null;
+		amountInput.focus();
 	};
 
 	$: tipPercentage =
 		percentageOption === 3
 			? customPercentage / 100
 			: percentageOptions.find((e) => e.id === percentageOption)?.value || 0.1;
-	$: withTip = calculateWithTip(amountPaid, tipPercentage);
+	$: withTip = calculateWithTip(amountPaid || 0, tipPercentage);
 </script>
 
 <svelte:head>
@@ -42,7 +44,9 @@
 	<p class="text">Amount to pay:</p>
 	<p class="amountInputWrapper">
 		<input
+			name="amountPaid-input"
 			type="number"
+			bind:this={amountInput}
 			bind:value={amountPaid}
 			class="amountInput bigText"
 			min="0"
@@ -138,6 +142,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		cursor: pointer;
 	}
 
 	.amountInputReset {
