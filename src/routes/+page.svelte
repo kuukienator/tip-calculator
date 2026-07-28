@@ -1,5 +1,5 @@
 <script lang="ts">
-	let amountPaid = 0;
+	let amountPaid: number;
 	let percentageOption = 1;
 	let customPercentage = 15;
 
@@ -46,6 +46,7 @@
 			bind:value={amountPaid}
 			class="amountInput bigText"
 			min="0"
+			placeholder="0.00"
 			aria-label="Amount to pay"
 		/>
 		<span class="amountInputReset">
@@ -67,7 +68,7 @@
 		</span>
 	</p>
 
-	<p class="text">Tip percentange:</p>
+	<p class="text">Tip percentage:</p>
 	<div class="percentageInputWrapper">
 		{#each percentageOptions as { id, label }}
 			<div>
@@ -116,8 +117,14 @@
 		outline: none;
 		background-color: #c9130b;
 		border-radius: 0.5rem;
-		padding: 0.2rem 0.4rem;
+		padding: 0.1rem 0.4rem;
 		color: #fefefe;
+	}
+
+	/* opacity: 1 overrides Firefox's default placeholder fading */
+	.amountInput::placeholder {
+		color: rgba(254, 254, 254, 0.6);
+		opacity: 1;
 	}
 
 	.amountInputReset button {
@@ -219,7 +226,7 @@
 		gap: 0.4rem;
 	}
 	.percentageInputWrapper > div {
-		margin: 0.2 0.2rem;
+		margin: 0.2rem 0.2rem;
 		display: flex;
 	}
 
