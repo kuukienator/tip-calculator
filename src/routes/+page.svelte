@@ -226,7 +226,7 @@
 		gap: 0.4rem;
 	}
 	.percentageInputWrapper > div {
-		margin: 0.2 0.2rem;
+		margin: 0.2rem 0.2rem;
 		display: flex;
 	}
 
