@@ -1,5 +1,5 @@
 <script lang="ts">
-	let amountPaid = 0;
+	let amountPaid: number;
 	let percentageOption = 1;
 	let customPercentage = 15;
 
@@ -46,6 +46,7 @@
 			bind:value={amountPaid}
 			class="amountInput bigText"
 			min="0"
+			placeholder="0.00"
 			aria-label="Amount to pay"
 		/>
 		<span class="amountInputReset">
