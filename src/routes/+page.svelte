@@ -121,6 +121,12 @@
 		color: #fefefe;
 	}
 
+	/* opacity: 1 overrides Firefox's default placeholder fading */
+	.amountInput::placeholder {
+		color: rgba(254, 254, 254, 0.6);
+		opacity: 1;
+	}
+
 	.amountInputReset button {
 		border-radius: 50%;
 		border: none;
