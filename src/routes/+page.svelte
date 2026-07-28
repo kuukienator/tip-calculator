@@ -68,7 +68,7 @@
 		</span>
 	</p>
 
-	<p class="text">Tip percentange:</p>
+	<p class="text">Tip percentage:</p>
 	<div class="percentageInputWrapper">
 		{#each percentageOptions as { id, label }}
 			<div>
@@ -117,7 +117,7 @@
 		outline: none;
 		background-color: #c9130b;
 		border-radius: 0.5rem;
-		padding: 0.2rem 0.4rem;
+		padding: 0.1rem 0.4rem;
 		color: #fefefe;
 	}
 
